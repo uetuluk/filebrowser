@@ -78,12 +78,12 @@ docker_manifests:
     image_templates:
       - "uetuluk/filebrowser:v{{ .Major }}-amd64"
 ## s6 image manifests
-  - name_template: "filebrowser/filebrowser:s6"
+  - name_template: "uetuluk/filebrowser:s6"
     image_templates:
       - "uetuluk/filebrowser:{{ .Tag }}-amd64-s6"
-  - name_template: "filebrowser/filebrowser:{{ .Tag }}-s6"
+  - name_template: "uetuluk/filebrowser:{{ .Tag }}-s6"
     image_templates:
       - "uetuluk/filebrowser:{{ .Tag }}-amd64-s6"
-  - name_template: "filebrowser/filebrowser:v{{ .Major }}-s6"
+  - name_template: "uetuluk/filebrowser:v{{ .Major }}-s6"
     image_templates:
       - "uetuluk/filebrowser:v{{ .Major }}-amd64-s6"
