@@ -210,6 +210,7 @@
             v-bind:modified="item.modified"
             v-bind:type="item.type"
             v-bind:size="item.size"
+            v-bind:path="item.path"
           >
           </item>
         </div>
@@ -226,6 +227,7 @@
             v-bind:modified="item.modified"
             v-bind:type="item.type"
             v-bind:size="item.size"
+            v-bind:path="item.path"
           >
           </item>
         </div>
