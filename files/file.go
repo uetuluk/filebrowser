@@ -23,6 +23,8 @@ import (
 	"github.com/filebrowser/filebrowser/v2/rules"
 )
 
+const PERM = 0664
+
 // FileInfo describes a file.
 type FileInfo struct {
 	*Listing
@@ -198,8 +200,9 @@ func (i *FileInfo) RealPath() string {
 	return i.Path
 }
 
+// TODO: use constants
+//
 //nolint:goconst
-//TODO: use constants
 func (i *FileInfo) detectType(modify, saveContent, readHeader bool) error {
 	if IsNamedPipe(i.Mode) {
 		i.Type = "blob"
